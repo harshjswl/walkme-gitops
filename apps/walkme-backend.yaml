@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO>.git
+    repoURL:  https://github.com/harshjswl/walkme-gitops.git
     targetRevision: main
     path: walkme-gitops/k8s
 
