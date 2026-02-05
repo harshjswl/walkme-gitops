@@ -9,7 +9,7 @@ spec:
   source:
     repoURL:  https://github.com/harshjswl/walkme-gitops.git
     targetRevision: main
-    path: walkme-gitops/k8s
+    path: k8s
 
   destination:
     server: https://kubernetes.default.svc
