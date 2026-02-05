@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: walkme-backend
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO>.git
+    targetRevision: main
+    path: walkme-gitops/k8s
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: walkme
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
